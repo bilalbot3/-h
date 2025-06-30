@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مودات ماينكرافت | Minecraft Mods</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        header {
+            background-color: #2d2d2d;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00a8ff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-bar {
+            width: 70%;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #3d3d3d;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .search-bar::placeholder {
+            color: #aaaaaa;
+        }
+        
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .youtube-section {
+            background: linear-gradient(135deg, #FF0000, #CC0000);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .youtube-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .youtube-text h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .youtube-text p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 15px;
+        }
+        
+        .youtube-btn {
+            display: inline-block;
+            background-color: white;
+            color: #FF0000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .youtube-img {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .youtube-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2.section-title {
+            font-size: 24px;
+            margin: 30px 0 20px;
+            color: #00a8ff;
+            border-bottom: 2px solid #00a8ff;
+            padding-bottom: 10px;
+        }
+        
+        .mods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .mod-card {
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .mod-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .mod-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #00a8ff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 2;
+        }
+        
+        .mod-video {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+        }
+        
+        .mod-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .mod-info {
+            padding: 15px;
+        }
+        
+        .mod-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #00a8ff;
+        }
+        
+        .mod-desc {
+            font-size: 14px;
+            color: #cccccc;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .mod-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #aaaaaa;
+        }
+        
+        .buy-btn {
+            display: block;
+            background-color: #00a8ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .buy-btn:hover {
+            background-color: #0095e0;
+        }
+        
+        footer {
+            background-color: #2d2d2d;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .mods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-bar {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">مودات ماينكرافت</div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="ابحث عن مودات ماينكرافت...">
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- قسم قناة اليوتيوب -->
+        <div class="youtube-section">
+            <div class="youtube-text">
+                <h2>قناتنا على اليوتيوب</h2>
+                <p>اشترك في القناة لمشاهدة أحدث المودات وتجربتها قبل الشراء</p>
+                <a href="https://youtube.com/channel/UCxIHcl-KHm68QJrKs6UF6hw?si=_oTXW0fHeqd1Cy3k" class="youtube-btn" target="_blank">
+                    زيارة القناة
+                </a>
+            </div>
+            <div class="youtube-img">
+                <!-- استبدل هذا الرابط بصورة من قناتك -->
+                <a href="https://youtube.com/channel/UCxIHcl-KHm68QJrKs6UF6hw?si=_oTXW0fHeqd1Cy3k" target="_blank">
+                    <img src="https://i.ytimg.com/vi/أدخل_كود_فيديو_من_قناتك/hqdefault.jpg" alt="قناة يوتيوب">
+                </a>
+            </div>
+        </div>
+
+        <h2 class="section-title">أشهر المودات</h2>
+        
+        <div class="mods-grid">
+            <!-- مود 1 -->
+            <div class="mod-card">
+                <div class="mod-badge">الأكثر تحميلاً</div>
+                <div class="mod-video">
+                    <!-- استبدل VIDEO_ID_1 برمز فيديو اليوتيوب الخاص بك -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="mod-info">
+                    <h3 class="mod-title">OptiFine</h3>
+                    <p class="mod-desc">هذا المود يحسن أداء اللعبة بشكل كبير ويضيف دعمًا للشادرات والدقة العالية، مما يجعل اللعبة أكثر جمالاً وسلاسة.</p>
+                    <div class="mod-meta">
+                        <span>الإصدار: 1.18.2</span>
+                        <span>التنزيلات: 250K+</span>
+                    </div>
+                    <!-- استبدل الرابط برابط بوت التلجرام الخاص بك -->
+                    <a href="https://t.me/اسم_بوتك_هنا" class="buy-btn" target="_blank">
+                        شراء عبر التلجرام
+                    </a>
+                </div>
+            </div>
+            
+            <!-- مود 2 -->
+            <div class="mod-card">
+                <div class="mod-video">
+                    <!-- استبدل VIDEO_ID_2 برمز فيديو اليوتيوب الخاص بك -->
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="mod-info">
+                    <h3 class="mod-title">Biomes O' Plenty</h3>
+                    <p class="mod-desc">يضيف هذا المود أكثر من 50 منطقة حيوية جديدة للعبة ماينكرافت، مما يجعل العالم أكثر تنوعًا وجمالاً.</p>
+                    <div class="mod-meta">
+                        <span>الإصدار: 1.19.2</span>
+                        <span>التنزيلات: 180K+</span>
+                    </div>
+                    <!-- استبدل الرابط برابط بوت التلجرام الخاص بك -->
+                    <a href="https://t.me/اسم_بوتك_هنا" class="buy-btn" target="_blank">
+                        شراء عبر التلجرام
+                    </a>
+                </div>
+            </div>
+            
+            <!-- يمكنك إضافة المزيد من المودات بنفس الطريقة -->
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 مودات ماينكرافت - جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>
